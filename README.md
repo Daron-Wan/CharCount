@@ -2,17 +2,21 @@
 
 **CharCount** is a Windows utility to read text or binary files to produce frequency counts of all characters in the file.
 
-This summary often shows unexpected characters in files, especially with very large files.
+This summary often shows unexpected characters in files, especially in very large files.
 
-The summary shows the counts for each hex character x'00' through x'FF' in the file, but suppresses rows or columns that are zero.
+The summary shows the counts for each hex character x'00' through x'FF' in the file, but suppresses rows or columns that are zero.  Pure ASCII text files should contain only characters x'00' through x'7E'.
 
 The **CharCount** result for a binary file will often show the full 16-by-16 matrix.
 
 Example 1
 ---------
-An ASCII text file with the letters "ABC" also has a line-feed (x'0A') and carriage return (x'0C') at the end of each line.  If created in Linux, the file only has a line-feed (x'0A') at the end of the line.
+An ASCII text file with the letters "ABC" also has a line-feed (x'0A') and carriage return (x'0D') at the end of each line.
 
-The process the file, press the *Select File* button and select the file, or using Windows Explorer, simply drag and drop the file on the middle of the program.
+If created in Linux, the file only has a line-feed (x'0A') at the end of the line.
+
+Press the *Control Codes* button to see a description of most values under x'20'.
+
+To process a file, press the *Select File* button and select the file, or using Windows Explorer, simply drag and drop the file onto the middle of the window.
 
 ![Example 1](Screens/CharCount-ABC-text.png)
 
@@ -30,5 +34,13 @@ The FASTA file in Example 2 consists of a "Defline" as the first line, followed 
 ![Example 3](Screens/CharCount-FASTA-Sequence.png)
 
 
-Run **CharCount** with a binary file (like an .exe, .jpg, or .png) to see almost all possibly characters, x'00' through x'FF', in a file.
+Delphi Source Code
+------------------
+The repository has complete Delphi source code, which was compiled using Delphi XE3.  The compiled executable, **CharCount.exe**, requires no special installation and can be run from any directory.
+
+
+Comment
+-------
+
+Run **CharCount** with a binary file (like an .exe, .jpg, or .png) to see almost all possible characters, x'00' through x'FF', in a file.
 
