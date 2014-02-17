@@ -10,9 +10,9 @@ The **CharCount** result for a binary file will often show the full 16-by-16 mat
 
 Example 1
 ---------
-An ASCII text file with the letters "ABC" also has a line-feed (x'0A') and carriage return (x'0D') at the end of each line.
+Each line in an ASCII text file has a line-feed (x'0A') and carriage return (x'0D') at the end of each line. So, a simple text file with "ABC" also has two more characters if created with Windows.
 
-If created in Linux, the file only has a line-feed (x'0A') at the end of the line.
+If created in Linux, the file has a line-feed (x'0A') at the end of each line.
 
 Press the *Control Codes* button to see a description of most values under x'20'.
 
